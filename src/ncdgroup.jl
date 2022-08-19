@@ -20,9 +20,11 @@ julia> split_group("rootgroup/subgroup/subsubgroup")
 ```
 """
 function split_group(group::AbstractString)::Vector{String}
+    # split group string to a vector
     groups = splitpath(group)
     groups = deleteat!(groups, findall(x -> x == "/", groups))
     groups = deleteat!(groups, findall(x -> x == "", groups))
+
     return groups
 end
 
@@ -40,11 +42,13 @@ Get the given group specified in the given NCDataset.
 """
 function get_group(dataset::NCDataset, groups::AbstractVector)::NCDataset
     curds = dataset
+
     if length(groups) > 0
         for group in groups
             curds = curds.group[group]
         end
     end
+
     return curds
 end
 
@@ -62,11 +66,13 @@ Define the given group in the given `dataset`.
 """
 function define_group(dataset::NCDataset, groups::AbstractVector)::NCDataset
     ds = dataset
+
     if length(groups) > 0
         for group in groups
             defGroup(ds, group)
             ds = ds.group[group]
         end
     end
+
     return ds
 end
