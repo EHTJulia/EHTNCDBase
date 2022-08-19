@@ -2,5 +2,6 @@ using EHTNCDBase
 using Test
 
 @testset "EHTNCDBase.jl" begin
-    # Write your tests here.
+    @test ncdmodes[:read] == "r"
+    @test split_group("a/b/c") == ["a", "b", "c"]
 end
