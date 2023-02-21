@@ -1,7 +1,7 @@
 name = "EHTNCDBase"
 uuid = "0d1a6071-c6ae-40ce-b68e-43bf1c0beb66"
 authors = ["Kazunori Akiyama"]
-version = "0.1.0"
+version = "0.1.1"
 
 [deps]
 NCDatasets = "85f8d34a-cbdd-5861-8df4-14fed0d494ab"
