@@ -7,5 +7,13 @@
 
 This is a base module including constants and common functions to handle NetCDF4 data in the pacakges of the [EHT Julia organization](https://github.com/EHTJulia).
 
+# Installation
+Assuming that you already have Julia correctly installed, it suffices to import EHTNCDBase.jl in the standard way:
+
+```julia
+using Pkg
+Pkg.add("EHTNCDBase")
+```
+
 ## Documentation
 The [latest](https://ehtjulia.github.io/EHTNCDBase.jl/dev) version available. The stable version has not been released. 
